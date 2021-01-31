@@ -1,0 +1,17 @@
+
+type User {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    city: String
+}
+
+# The Root Query for the application
+type Query {
+    user(id: ID): User!
+    users: [User]
+}
+
+type Mutation {
+    updateUser(id: ID, firstName: String!, lastName: String!, city: String!): User
+}
